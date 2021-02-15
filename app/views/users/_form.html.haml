@@ -1,0 +1,43 @@
+%br/
+%br/
+= @user.errors.full_messages.to_sentence if @user.errors.any? 
+%h1= form_name 
+= form_with model: @user do |form| 
+    %br/
+    %br/
+    = form.label :name 
+    = form.text_field :name 
+    %br/
+    %br/    
+    = form.label :age 
+    = form.number_field :age 
+    %br/
+    %br/
+    = form.label :password 
+    = form.password_field :password 
+    %br/
+    %br/
+    = form.label :city 
+    = form.text_field :city 
+    %br/
+    %br/
+    = form.label :email 
+    = form.email_field :email 
+    %br/
+    %br/
+    = form.label :date__of_birth 
+    = form.date_field :dob 
+    %br/
+    %br/
+    = form.label :gender 
+    = form.radio_button :gender, "male" 
+    = form.label :male, "male" 
+    = form.radio_button :gender, "female" 
+    = form.label :female, "female" 
+    %br/
+    %br/
+    
+    = form.submit 
+
+
+  
