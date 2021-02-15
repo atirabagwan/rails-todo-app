@@ -1,0 +1,24 @@
+%h1 Listing Users
+%table
+  %thead
+    %tr
+      %th Name
+      %th Age
+      %th City
+      %th Email
+      %th Gender
+      %th Date of birth
+      %th{:colspan => "3"}
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.age
+        %td= user.city
+        %td= user.email
+        %td= user.gender
+        %td= user.dob
+        %td= link_to "Edit user", edit_user_path(user)
+        %td= button_to 'Remove', user_path(user), method: 'delete', data: { confirm: 'Are you sure?' }
+%br/
+

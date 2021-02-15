@@ -1,0 +1,10 @@
+<tr>
+    <td><%= @user.name %></td>
+    <td><%= @user.age %></td>
+    <td><%= @user.city %></td>
+    <td><%= @user.email %></td>
+    <td><%= @user.gender %></td>
+    <td><%= @user.dob %></td>
+    <td><%= link_to "Edit user", edit_user_path(@user) %></td>
+    <td><%= button_to 'Remove', user_path(@user), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+</tr>
